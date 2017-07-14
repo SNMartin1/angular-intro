@@ -7,9 +7,11 @@ myApp.controller('OnloadController', function() {
   var control = this;
   console.log(this);
 
+   control.userArray = [];
+   control.displayInfo = function(userName, userMessage) {
+  // control.info = {userName: userName, userMessage: userMessage};
 
-  control.displayInfo = function(userName, userMessage) {
-    var info = {userName: userName, userMessage: userMessage};
-    console.log(info);
+  var info = {userName: userName, userMessage: userMessage};
+  control.userArray.push(info);
   };
 });
